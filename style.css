@@ -1,0 +1,27 @@
+body{
+  margin: 0;
+}
+*, *::after, *::before{
+  box-sizing: border-box;
+}
+.color-box{
+  background-color: wheat;
+  height: 22.8vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-weight: bolder;
+  font-size: 25px;
+  padding: 5px;
+  color: white;
+}
+.color-box-container{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.color-box:hover{
+  color: wheat;
+}
+.code-color{
+  display: none;
+}
