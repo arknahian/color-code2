@@ -14,14 +14,46 @@ body{
   font-size: 25px;
   padding: 5px;
   color: white;
+  cursor: pointer;
 }
 .color-box-container{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 }
-.color-box:hover{
-  color: wheat;
-}
-.code-color{
+.hover-a{
+  outline: 1px solid white;
+  padding: 10px;
+  font-size: 19px;
+  position: absolute;
+  margin: 80px 152px;
   display: none;
+  border-radius: 3px;
+}
+.color-box:hover .hover-a{
+  display: block;
+}
+#pop-up{
+  /* display: flex; */
+  display: none;
+  background-color: wheat;
+  height: 101%;
+  position: absolute;
+  margin-top: -49.2%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#pop-up h1{
+  color: white;
+  font-size: 4rem;
+  background-color: rgba(240, 248, 255, 0.418);
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+#pop-up h2{
+  color: white;
+  font-size: 2rem;
 }

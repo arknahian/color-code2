@@ -30,11 +30,20 @@ for (let i = 0; i < box.length; i++) {
       codeSpan[i].innerText = colorCode[i];
     }
   }
-  element.addEventListener("click", function(event) {
+  element.addEventListener("click", function (event) {
     function colorCodeCopy() {
       var copyText = event.target.style.backgroundColor;
       navigator.clipboard.writeText(copyText);
-      alert("Copied the text: " + copyText);
+      var popUp = document.getElementById("pop-up");
+      popUp.style.display = "flex";
+      popUp.style.backgroundColor = copyText;
+      document.getElementById("display-color-code").innerText = copyText;
+
+      var strCmd = "document.getElementById('pop-up').style.display = 'none'";
+      var waitSeconds = 5;
+
+      var timeOutPeriod = waitSeconds * 300;
+      setTimeout(strCmd, timeOutPeriod);
     }
     colorCodeCopy()
 
