@@ -31,6 +31,12 @@ for (let i = 0; i < box.length; i++) {
     }
   }
   element.addEventListener("click", function(event) {
-    console.log(event.target.childNodes["#code-color"]);
+    function colorCodeCopy() {
+      var copyText = event.target.style.backgroundColor;
+      navigator.clipboard.writeText(copyText);
+      alert("Copied the text: " + copyText);
+    }
+    colorCodeCopy()
+
   })
 }
